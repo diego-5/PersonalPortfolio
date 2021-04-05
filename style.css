@@ -1,0 +1,268 @@
+/*custom colors*/
+:root {
+    --main-red: #E68774;
+    --main-orange: #F3BC85;
+    --main-blue: #4A506A;
+    --main-white: #EFEAD9;
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: #EFEAD9;
+    font-family: 'Montserrat Medium', sans-serif;
+}
+
+h1 {
+    font-family: 'Yanone Kaffeesatz', Serif;
+    letter-spacing: 12px;
+    font-size: 100px;
+    text-align: center;
+    color: var(--main-orange);
+}
+
+h2 {
+    font-size: x-large;
+}
+
+p {
+    font-size: large;
+}
+
+/*Nav bar stuff*/
+nav {
+    position: fixed;
+    width: 100%
+}
+
+nav ul {
+    background-color: var(--main-red);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+    width: 12%;
+    max-width: 300px;
+    min-width: 80px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 70px;
+
+}
+
+nav li a:hover {
+    background-color: var(--main-white);
+    color: black;
+}
+
+nav i {
+    font-size: 30px;
+    padding-bottom: 2px;
+}
+
+/*nav bar stuff end*/
+
+/* welcome section*/
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-blue);
+    color: white;
+}
+
+/*welcome end*/
+
+
+/*&project start*/
+#projects {
+    background-color: var(--main-white);
+    color: black;
+
+}
+
+.project-section {
+    padding: 90px 200px 30px 200px;
+    text-align: center;
+}
+
+.projects-section-header {
+    font-family: 'Yanone Kaffeesatz', Serif;
+    letter-spacing: 4px;
+    font-size: 35px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+
+}
+
+/*grid layout with auto resizing*/
+.project-section {
+    height: 100vh;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 60px;
+
+}
+
+.project-image {
+    height: 205px;
+    width: 100%;
+    object-fit: fill;
+    margin-bottom: -3px;
+
+}
+
+.project-title {
+    background-color: var(--main-blue);
+    height: 60px;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.project-tile {
+    padding: 0px 25px 0px 25px;
+    background-color: var(--main-red);
+    text-decoration: none;
+    max-width: 400px;
+}
+
+.code {
+    padding: 0px 3px 1px 3px;
+    color: var(--main-blue);
+    transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+    color: var(--main-white);
+}
+
+.project:hover .project-title {
+    background-color: var(--main-red);
+    transition: background-color 0.3s ease-out;
+}
+
+/*project end*/
+.footer {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--main-blue);
+    padding: 40px 50px 40px 50px;
+
+}
+
+.footer-heading {
+    font-size: 70px;
+    padding-bottom: 15px;
+}
+
+.footer-subheading {
+    color: var(--main-white);
+    font-size: 20px;
+    font-style: italic;
+    padding-bottom: 100px;
+}
+
+.contact-list {
+    list-style-type: none;
+    text-align: center;
+    color: var(--main-red);
+    padding-bottom: 20px;
+}
+
+.footer-icon-link {
+    font-size: xxx-large;
+    color: var(--main-white);
+    text-decoration: none;
+    padding: 0px 40px 40px 40px;
+
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+}
+
+.fa-github {
+    color: black;
+}
+
+/*wavy link underline stuff*/
+.link {
+    position: relative;
+    transition: clip-path 275ms ease;
+}
+
+.link:hover span::before, .link:focus span::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.link span {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+
+}
+
+.link span::before {
+    position: absolute;
+    content: attr(data-content);
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--main-red);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 500ms ease;
+    padding-bottom: 4px;
+}
+
+span.wavy::before {
+    text-decoration-style: double;
+}
+
+/*wavy link underline stuff finishes*/
+
+/*footer section start*/
+
+

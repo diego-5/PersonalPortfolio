@@ -11,8 +11,12 @@
 </head>
 <body>
 <!-- nav bar start-->
-<nav id="navbar">
-    <ul class="nav-list">
+<nav class="collapsible-menu" id="navbar">
+    <div class="checkbox nav-list">
+        <input type="checkbox" id="menu">
+        <label for="menu"></label>
+    </div>
+    <ul class="nav-list menu-content">
         <li>
             <a href="#contacts"> <i class="far fa-address-book"></i><br>Contact Info</a>
         </li>
@@ -43,9 +47,7 @@
 <!--About me start-->
 <section id="about-me">
 
-    <h2>
-        About Me
-    </h2>
+    <h2 class="about-heading">About Me</h2>
     <img
             class="about-img"
             src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg"
@@ -71,14 +73,13 @@
                 href="https://codepen.io/freeCodeCamp/full/zNqgVx"
                 target="_blank"
                 class="project project-tile">
-
             <img
                     class="project-image"
-                    src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg"
+                    src="images/project-2.png"
                     alt="project">
-            <p class="project project-title">
+            <p class="project-title">
                 <span class="code">{</span>
-                title
+                Snicker's Biography Page
                 <span class="code">}</span>
             </p>
         </a>

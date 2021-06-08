@@ -62,7 +62,7 @@ nav {
     overflow: hidden;
 }
 
-.checkbox {
+#menu {
     display: none;
 }
 
@@ -116,9 +116,6 @@ nav i {
         float: right;
     }
 
-    input#menu {
-        display: none;
-    }
 
     br {
         display: none;
@@ -132,19 +129,29 @@ nav i {
         height: 48px;
     }
 
-    .menu-content {
-        max-height: 0px;
-        overflow: hidden;
+    /*navbar toggle Hide and icon change*/
+    #menu-content {
+        display: none;
+        padding-top: 10px;
+        width: 100%;
+
+    }
+
+    #menu-content span {
+        font-size: 30px;
+        padding-left: 20px;
+        text-align: center;
     }
 
     input:checked + label {
         background-image: url(images/close.png);
     }
 
-    input:checked ~ .menu-content {
-        max-height: 100%;
-        overflow: hidden;
+    #navbar input:checked ~ #menu-content {
+        display: block;
+
     }
+
 
 }
 /*nav bar stuff end*/

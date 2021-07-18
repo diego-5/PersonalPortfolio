@@ -91,7 +91,7 @@ nav i {
 
 @media screen and (max-width: 850px) {
     nav {
-        text-align: left;
+        text-align: center;
     }
 
     nav li {
@@ -99,9 +99,9 @@ nav i {
         width: 100%;
     }
 
-    nav li a {
-
-        text-align: left;
+    nav li a:hover {
+        background-color: var(--main-blue);
+        color: var(--main-white);
     }
 
     .checkbox {
@@ -125,14 +125,13 @@ nav i {
         display: block;
         cursor: pointer;
         background: url(images/hamburger-meal.png) no-repeat left center/60%;
-        padding: 10px 10px 10px 50px;
+        padding: 50px 10px 10px 50px;
         height: 48px;
     }
 
     /*navbar toggle Hide and icon change*/
     #menu-content {
         display: none;
-        padding-top: 10px;
         width: 100%;
 
     }
@@ -140,7 +139,7 @@ nav i {
     #menu-content span {
         font-size: 30px;
         padding-left: 20px;
-        text-align: center;
+        text-align: left;
     }
 
     input:checked + label {
@@ -207,7 +206,7 @@ nav i {
 }
 
 .project-section {
-    padding: 115px 200px 30px 200px;
+    padding: 115px 10px 30px 10px;
     text-align: center;
 }
 
@@ -225,26 +224,46 @@ nav i {
 .project-section {
     min-height: 100vh;
 }
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 40px;
     width: 100%;
     max-width: 1300px;
     margin: auto;
 }
 
-@media screen and (max-width: 850px) {
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*@media screen and (max-width: 850px) {
     .project-grid {
         grid-template-columns: none;
         grid-gap: 15px;
 
     }
+    .projects-section-header{
+        font-size: 40px;
+    }
 
     .project-tile {
-        min-width: 300px;
+
     }
-}
+    .project-title{
+
+        overflow: hidden;
+    }
+}*/
 .project-image {
     height: auto;
     width: 100%;
@@ -265,7 +284,6 @@ nav i {
     padding: 0px 25px 0px 25px;
     background-color: var(--main-red);
     text-decoration: none;
-    max-width: 400px;
 }
 
 .code {

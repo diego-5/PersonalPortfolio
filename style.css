@@ -95,7 +95,8 @@ nav i {
     }
 
     nav li {
-        float: none;
+
+        float: right;
         width: 100%;
     }
 
@@ -147,8 +148,7 @@ nav i {
     }
 
     #navbar input:checked ~ #menu-content {
-        display: block;
-
+        display: block;;
     }
 
 

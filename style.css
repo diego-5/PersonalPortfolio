@@ -89,7 +89,7 @@ nav i {
     padding-bottom: 2px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     nav {
         text-align: center;
     }
@@ -246,24 +246,6 @@ nav i {
     }
 }
 
-/*@media screen and (max-width: 850px) {
-    .project-grid {
-        grid-template-columns: none;
-        grid-gap: 15px;
-
-    }
-    .projects-section-header{
-        font-size: 40px;
-    }
-
-    .project-tile {
-
-    }
-    .project-title{
-
-        overflow: hidden;
-    }
-}*/
 .project-image {
     height: auto;
     width: 100%;

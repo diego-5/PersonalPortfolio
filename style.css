@@ -284,6 +284,11 @@ nav i {
 }
 
 /*project end*/
+
+/* todo sections */
+
+
+/* todo sections end */
 .footer {
     min-height: 98vh;
     display: flex;
@@ -367,5 +372,4 @@ span.double::before {
 /*wavy link underline stuff finishes*/
 
 /*footer section start*/
-
 

@@ -247,16 +247,17 @@ nav i {
 }
 
 .project-image {
-    height: auto;
+    height: 70%;
     width: 100%;
-    object-fit: fill;
+    object-fit: scale-down;
     margin-bottom: -3px;
+    border: black 5px;
 
 }
 
 .project-title {
     background-color: var(--main-blue);
-    height: 60px;
+    height: 30%;
     color: white;
     text-align: center;
     padding: 18px;
